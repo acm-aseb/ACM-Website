@@ -111,6 +111,21 @@ section{padding:3rem 8%}
   box-shadow:0 15px 40px rgba(255,78,205,.4);
 }
 
+/* CTA ROW - aligns register button and QR */
+.cta-row{
+  display:flex;
+  align-items:center;
+  gap:1.5rem;
+  margin-top:1.5rem;
+}
+.cta-row .register-btn{margin-top:0;}
+.qr-code{
+  width:150px;
+  border-radius:16px;
+  border:3px solid #ff4ecd;
+  display:block;
+}
+
 /* SECTION TITLE */
 .section-title{
   font-size:2rem;
@@ -135,6 +150,7 @@ footer{
   .event-images{
     justify-content:center;
   }
+  .cta-row{flex-direction:column;justify-content:center;}
   nav{display:none}
 }
 </style>
@@ -148,7 +164,7 @@ footer{
     <strong>ACM Amrita</strong>
   </div>
   <nav>
-    <a href="home.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="events.html">Events</a>
     <a href="teams.html">Teams</a>
     <a href="contact.html">Contact Us </a>
@@ -183,14 +199,14 @@ footer{
         overnight hackathon brings together passionate developers and problem-solvers
         to build innovative solutions through collaboration, creativity, and technology.
       </p>
-      <button class="register-btn"
-  onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLScaqTneaN8szmez5ZVhHeULkg7GILpIxD0aOyJmp0P1TVo_OA/viewform?usp=publish-editor'">
-  Register Now
-</button>
-      <img src="algomania_qr.png" alt="Algomania Registration QR"
-     style="margin-top:1.2rem;width:150px;border-radius:16px;border:3px solid #ff4ecd;">
-
-
+      <div class="cta-row">
+        <button class="register-btn"
+          onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLScaqTneaN8szmez5ZVhHeULkg7GILpIxD0aOyJmp0P1TVo_OA/viewform?usp=publish-editor'">
+          Register Now
+        </button>
+          <img src="algomania_qr.png" alt="Algomania Registration QR" class="qr-code">
+        </a>
+      </div>
     </div>
   </div>
 </section>
